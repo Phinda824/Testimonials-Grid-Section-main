@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Karla:wght@400;700&family=Kumbh+Sans&family=Lexend+Deca&family=Montserrat:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: var(--Light-grayish-blue);
+}
+
+.container{
+    max-width: 1050px;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: "cell-1 cell-1 cell-2 cell-3"
+                         "cell-4 cell-5 cell-5 cell-3";
+    grid-gap: 10px;
+    margin: 10em auto;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 0 15px 0 0;
+}
+
+/* Cell-1 */
+.cell-1{
+    grid-area: cell-1;
+    background: var(--Moderate-violet);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-position: 81% 0%;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 10px;
+}
+.cell-1 h1{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--White);
+}
+.cell-1 p{
+    font-weight: 400;
+    color: var(--Light-gray);
+}
+.cell-1 span{
+    color: var(--Light-gray);
+}
+.cell-1 .profile p{
+    font-weight: 400;
+    color: var(--White);
+}
+
+/* Cell-2 */
+.cell-2{
+    grid-area: cell-2;
+    background: var(--Very-dark-grayish-blue);
+    color: var();
+    padding: 30px;
+    border-radius: 10px;
+}
+.cell-2 h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--White);
+}
+.cell-2 p{
+    font-weight: 400;
+    color: var(--Light-gray);
+}
+.cell-2 span{
+    color: var(--Light-gray);
+}
+.cell-2 .profile p{
+    font-weight: 400;
+    color: var(--White);
+}
+
+/* Cell-3 */
+.cell-3{
+    grid-area: cell-3;
+    background: var(--White);
+    padding: 30px;
+    border-radius: 10px;
+}
+.cell-3 h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--Very-dark-blackish-blue);
+}
+.cell-3 p{
+    font-weight: 400;
+    color: var(--Very-dark-grayish-blue);
+}
+.cell-3 span{
+    color: var(--Light-gray);
+}
+.cell-3 .profile p{
+    font-weight: 400;
+    color: var(--Very-dark-blackish-blue);
+}
+
+/* Cell-4 */
+.cell-4{
+    grid-area: cell-4;
+    background: var(--White);
+    padding: 30px;
+    border-radius: 10px;
+}
+.cell-4 h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--Very-dark-blackish-blue);
+}
+.cell-4 p{
+    font-weight: 400;
+    color: var(--Very-dark-grayish-blue);
+}
+.cell-4 span{
+    color: var(--Light-gray);
+}
+.cell-4 .profile p{
+    font-weight: 400;
+    color: var(--Very-dark-blackish-blue);
+}
+
+
+/* Cell-5 */
+.cell-5{
+    grid-area: cell-5;
+    background: var(--Very-dark-blackish-blue);
+    padding: 30px;
+    border-radius: 10px;
+}
+.cell-5 h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--White);
+}
+.cell-5 p{
+    font-weight: 400;
+    color: var(--Light-gray);
+}
+.cell-5 span{
+    color: var(--Light-gray);
+}
+.cell-5 .profile p{
+    font-weight: 400;
+    color: var(--White);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+    @media screen and (max-width: 600px) {
+
+        .container{
+            grid-template-columns: repeat(1, 300px);
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: "cell-1"
+                                "cell-2"
+                                "cell-4"
+                                "cell-5"
+                                "cell-3";
+            
+        }
+}
